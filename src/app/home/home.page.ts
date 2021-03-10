@@ -172,35 +172,30 @@ export class HomePage {
               todolist['date'] = data.date;
               todolist['time'] = data.time;
               todolist['place'] = todo.place;
-
               this.CurdService.updateDataIn(todo.id, todolist);
             } else if (data.program == '') {
               todolist['program'] = todo.program;
               todolist['date'] = data.date;
               todolist['time'] = data.time;
               todolist['place'] = todo.place;
-
               this.CurdService.updateDataIn(todo.id, todolist);
             } else if (data.date == '') {
               todolist['program'] = data.program;
               todolist['date'] = todo.date;
               todolist['time'] = data.time;
               todolist['place'] = data.place;
-
               this.CurdService.updateDataIn(todo.id, todolist);
             } else if (data.time == '') {
               todolist['program'] = data.program;
               todolist['date'] = data.date;
               todolist['time'] = todo.time;
               todolist['place'] = data.place;
-
               this.CurdService.updateDataIn(todo.id, todolist);
             } else if (data.place == '') {
               todolist['program'] = data.program;
               todolist['date'] = data.date;
               todolist['time'] = data.time;
               todolist['place'] = todo.place;
-
               this.CurdService.updateDataIn(todo.id, todolist);
             } else {
               todolist['program'] = data.program;

@@ -1,37 +1,55 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="false">
   <ion-toolbar>
-    <ion-title> TODO </ion-title>
+    <ion-title
+      ><marquee scrolldelay="170" behavior="SCROLL"
+        >Did you forget anything?</marquee
+      >
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">TODO</ion-title>
+      <ion-title
+        size="large"
+        style="
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        "
+        >TODO</ion-title
+      >
       <ion-buttons slot="end" (click)="ADD()">
+        <ion-label>{{today | date: 'dd/MM/yyyy'}}</ion-label>
         <ion-button>
-          <ion-item>{{today | date: 'dd/MM/yyyy'}}</ion-item>
           <ion-icon name="add-circle" slot="end" size="large"></ion-icon>
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
+
   <ion-content [fullscreen]="false">
     <div>
       <ion-label *ngFor="let i of this.allList">
         <ion-item-sliding>
           <ion-item-options side="end">
-            <ion-item-option color="tertiary"  (click)="EDIT(i)">
+            <ion-item-option color="tertiary" (click)="EDIT(i)">
               <ion-icon name="pencil"></ion-icon>
             </ion-item-option>
-            <ion-item-option color="danger"  (click)="DEL(i)">
+            <ion-item-option color="danger" (click)="DEL(i)">
               <ion-icon name="trash-bin"></ion-icon>
             </ion-item-option>
           </ion-item-options>
 
           <ion-item>
             <ion-label text-wrap>
-              <h1>{{i.program}}</h1>
+              <h1
+                style="
+                  font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                    'Trebuchet MS', sans-serif;
+                "
+              >
+                {{i.program}}
+              </h1>
               <p>{{i.date | date: 'dd/MM/yyyy'}} - {{i.time}}</p>
               <p>at {{i.place}}</p>
             </ion-label>
