@@ -10,6 +10,7 @@
       <ion-title size="large">TODO</ion-title>
       <ion-buttons slot="end" (click)="ADD()">
         <ion-button>
+          <ion-item>{{today | date: 'dd/MM/yyyy'}}</ion-item>
           <ion-icon name="add-circle" slot="end" size="large"></ion-icon>
         </ion-button>
       </ion-buttons>
@@ -31,8 +32,8 @@
           <ion-item>
             <ion-label text-wrap>
               <h1>{{i.program}}</h1>
-              <p>{{i.date}}</p>
-              <p>{{i.time}}</p>
+              <p>{{i.date | date: 'dd/MM/yyyy'}} - {{i.time}}</p>
+              <p>at {{i.place}}</p>
             </ion-label>
 
             <ion-icon
