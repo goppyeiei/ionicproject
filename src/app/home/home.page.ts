@@ -10,7 +10,7 @@ import * as _ from 'lodash';
 })
 export class HomePage {
   allList: any;
-  color: any;
+
 
   constructor(
     private CurdService: CurdService,
