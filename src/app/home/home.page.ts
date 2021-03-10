@@ -71,7 +71,12 @@ export class HomePage {
               check: false,
               color: '#a4b0be',
             };
-            this.CurdService.createData(todolist);
+            if (data.program == "" || data.date == "" || data.time == ""){
+              return false;
+            } else {
+              this.CurdService.createData(todolist);
+            }
+
           },
         },
       ],

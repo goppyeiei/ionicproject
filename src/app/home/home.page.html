@@ -20,10 +20,10 @@
       <ion-label *ngFor="let i of this.allList">
         <ion-item-sliding>
           <ion-item-options side="end">
-            <ion-item-option color="tertiary" expandable (click)="EDIT(i)">
+            <ion-item-option color="tertiary"  (click)="EDIT(i)">
               <ion-icon name="pencil"></ion-icon>
             </ion-item-option>
-            <ion-item-option color="danger" expandable (click)="DEL(i)">
+            <ion-item-option color="danger"  (click)="DEL(i)">
               <ion-icon name="trash-bin"></ion-icon>
             </ion-item-option>
           </ion-item-options>
