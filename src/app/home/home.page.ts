@@ -170,7 +170,7 @@ export class HomePage {
   }
 
   // CHECK
-  CHECK(i) {
+  CHECK(i: { check: boolean; id: any; }) {
     let check = {};
     let color = {};
 
